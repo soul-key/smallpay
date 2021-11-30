@@ -6,10 +6,16 @@
         "php": ">=7.1.0"
     },
     "license": "MIT",
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "SmallPay\\": "src/"
+            "SoulKey\\Smallpay\\": "src/"
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "soul-key",
+            "email": "soul-key@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
 }
