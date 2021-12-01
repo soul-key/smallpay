@@ -1,6 +1,6 @@
 <?php
 /**
- * 发起支付示例
+ * 支付异步回调示例
  */
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -16,11 +16,11 @@ $client = new Payment($appId, $appKey);
 $check = $client->VerifySign($_POST);
 if ($check) {
     //执行商户的逻辑
-
-
+    
     //处理完成返回如下 json
     echo json_encode(['state'=>"SUCCESS"]);
 }
 
 //处理失败
 echo json_encode(['state'=>"FAIL"]);
+exit();
