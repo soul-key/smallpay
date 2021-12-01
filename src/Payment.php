@@ -172,4 +172,14 @@ class Payment
         $this->params["sign"] = Tools::Sign($this->params, $this->appKey);
         return Tools::curlPost($url, $this->params);
     }
+
+    /**
+     * 验签
+     * @param array $param
+     * @return bool
+     */
+    public function VerifySign(array $param)
+    {
+        return isset($param['sign']) && $param['sign'] == Tools::Sign($this->params, $this->appKey);
+    }
 }

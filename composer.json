@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SoulKey\\Smallpay\\": "src/"
+            "Smallpay\\": "src/"
         }
     },
     "authors": [
