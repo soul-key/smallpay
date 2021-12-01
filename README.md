@@ -63,11 +63,11 @@ if ($check) {
     
     //处理完成返回如下 json
     echo json_encode(['state'=>"SUCCESS"]);
+}else {
+    //验签失败
+    echo json_encode(['state' => "FAIL"]);
+    exit();
 }
-
-//处理失败
-echo json_encode(['state'=>"FAIL"]);
-exit();
 ```
 * ### 退款示例
 ```php
