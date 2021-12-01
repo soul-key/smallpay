@@ -5,7 +5,7 @@
 
 namespace SmallPay;
 
-use SmallPay\library\Tools;
+use SmallPay\Library\Tools;
 
 class Payment
 {
