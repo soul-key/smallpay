@@ -180,6 +180,6 @@ class Payment
      */
     public function VerifySign(array $param)
     {
-        return isset($param['sign']) && $param['sign'] == Tools::Sign($this->params, $this->appKey);
+        return isset($param['sign']) && $param['sign'] == Tools::Sign($param, $this->appKey);
     }
 }
