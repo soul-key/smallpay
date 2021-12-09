@@ -25,10 +25,10 @@ class Tools
     /**
      * 生成签名
      * @param array $params
-     * @param string $secret
+     * @param $secret
      * @return string
      */
-    public static function Sign(array $params, string $secret)
+    public static function Sign(array $params, $secret)
     {
         ksort($params);
         $str = array();

@@ -17,7 +17,7 @@ class Refund
      * @param string $appId 应用ID
      * @param string $appKey 应用秘钥
      */
-    public function __construct(string $appId, string $appKey)
+    public function __construct($appId, $appKey)
     {
         $this->appId = $appId;
         $this->appKey = $appKey;
@@ -25,10 +25,10 @@ class Refund
 
     /**
      * 设置商户单号(与下单同一编号)
-     * @param string $out_trade_no
+     * @param $out_trade_no
      * @return $this
      */
-    public function SetOutTradeNo(string $out_trade_no): Refund
+    public function SetOutTradeNo($out_trade_no)
     {
         $this->params["out_trade_no"] = $out_trade_no;
         return $this;
@@ -36,10 +36,10 @@ class Refund
 
     /**
      * 发送请求
-     * @param string $url
+     * @param $url
      * @return bool|string
      */
-    public function Send(string $url)
+    public function Send($url)
     {
         if ($url == "") {
             return false;

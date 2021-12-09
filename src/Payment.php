@@ -17,7 +17,7 @@ class Payment
      * @param string $appId 应用ID
      * @param string $appKey 应用秘钥
      */
-    public function __construct(string $appId, string $appKey)
+    public function __construct($appId, $appKey)
     {
         $this->appId = $appId;
         $this->appKey = $appKey;
@@ -28,7 +28,7 @@ class Payment
      * @param string $pay_code
      * @return $this
      */
-    public function SetPayCode(string $pay_code): Payment
+    public function SetPayCode($pay_code)
     {
         $this->params["pay_code"] = $pay_code;
         return $this;
@@ -39,7 +39,7 @@ class Payment
      * @param string $out_trade_no
      * @return $this
      */
-    public function SetOutTradeNo(string $out_trade_no): Payment
+    public function SetOutTradeNo($out_trade_no)
     {
         $this->params["out_trade_no"] = $out_trade_no;
         return $this;
@@ -50,7 +50,7 @@ class Payment
      * @param int $money
      * @return $this
      */
-    public function SetMoney(int $money): Payment
+    public function SetMoney($money)
     {
         $this->params["money"] = $money;
         return $this;
@@ -61,7 +61,7 @@ class Payment
      * @param string $goods_name
      * @return $this
      */
-    public function SetGoodsName(string $goods_name): Payment
+    public function SetGoodsName($goods_name)
     {
         $this->params["goods_name"] = $goods_name;
         return $this;
@@ -72,7 +72,7 @@ class Payment
      * @param string $return_url
      * @return $this
      */
-    public function SetReturnUrl(string $return_url): Payment
+    public function SetReturnUrl($return_url)
     {
         $this->params["return_url"] = $return_url;
         return $this;
@@ -83,7 +83,7 @@ class Payment
      * @param int $notify_url
      * @return $this
      */
-    public function SetNotifyUrl(string $notify_url): Payment
+    public function SetNotifyUrl($notify_url)
     {
         $this->params["notify_url"] = $notify_url;
         return $this;
@@ -94,7 +94,7 @@ class Payment
      * @param string $sub_appid
      * @return $this
      */
-    public function SetSubAppId(string $sub_appid): Payment
+    public function SetSubAppId($sub_appid)
     {
         $this->params["money"] = $sub_appid;
         return $this;
@@ -105,7 +105,7 @@ class Payment
      * @param string $sub_openid
      * @return $this
      */
-    public function SetSubOpenid(string $sub_openid): Payment
+    public function SetSubOpenid($sub_openid)
     {
         $this->params["sub_openid"] = $sub_openid;
         return $this;
@@ -116,7 +116,7 @@ class Payment
      * @param string $payer_client_ip
      * @return $this
      */
-    public function SetPayerClientIp(string $payer_client_ip): Payment
+    public function SetPayerClientIp($payer_client_ip)
     {
         $this->params["payer_client_ip"] = $payer_client_ip;
         return $this;
@@ -127,7 +127,7 @@ class Payment
      * @param string $device_id
      * @return $this
      */
-    public function SetDeviceId(string $device_id): Payment
+    public function SetDeviceId($device_id)
     {
         $this->params["device_id"] = $device_id;
         return $this;
@@ -138,7 +138,7 @@ class Payment
      * @param string $browse_type
      * @return $this
      */
-    public function SetBrowseType(string $browse_type): Payment
+    public function SetBrowseType($browse_type)
     {
         $this->params["browse_type"] = $browse_type;
         return $this;
@@ -149,7 +149,7 @@ class Payment
      * @param int $stamptime
      * @return $this
      */
-    public function SetStampTime(int $stamptime): Payment
+    public function SetStampTime($stamptime)
     {
         $this->params["stamptime"] = $stamptime;
         return $this;
@@ -160,7 +160,7 @@ class Payment
      * @param string $url
      * @return bool|string
      */
-    public function Send(string $url)
+    public function Send($url)
     {
         if ($url == "") {
             return false;
