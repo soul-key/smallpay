@@ -3,7 +3,7 @@
     "description": "小微支付配套PHP库",
     "type": "library",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=5.6.0"
     },
     "license": "MIT",
     "autoload": {
