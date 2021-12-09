@@ -36,10 +36,18 @@ $client->SetMoney(1);
 $client->SetGoodsName("测试商品");
 $client->SetNotifyUrl("http://www.baidu.com");
 $client->SetReturnUrl("http://www.baidu.com");
-//发送支付请求
+//发送支付请求(正常返回json格式数据)
 $res = $client->Send($payUrl);
 
-var_dump($res);
+$res = json_decode($res, true);
+if (isset($res['data']['url'])) {
+    //返回的支付url 经过了 urlencode 转码，故此处要解码
+    $pay_url = urldecode($res['data']['url']);
+    header("location:" . $pay_url);
+} else {
+    var_dump($res);
+}
+die;
 ```
 * #### 支付异步通知示例
 ```php
